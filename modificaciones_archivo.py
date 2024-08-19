@@ -40,7 +40,7 @@ def editar_nombre_archivo(ruta_archivo):
     # Vuelve a obtener la ruta del archivo con el nuevo nombre.
     ruta_archivo_2 = os.path.abspath(nuevo_nombre + os.path.splitext(nombre_archivo)[1])
     # Si el argumento es --create o no se pasa argumento, crea carpeta con el nuevo nombre del archivo y mueve el archivo a la carpeta.
-    if opcion == '--create' or len(sys.argv) == 1:
+    if len(sys.argv) == 1:
         # Crear carpeta con el nuevo nombre del archivo y mover el archivo a la carpeta.
         print('Creando carpeta y moviendo archivo:', nuevo_nombre)
         crear_carpeta_y_mover_archivo(nueva_ruta, nueva_carpeta, nuevo_nombre)
